@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="fanx.ico" type="image/x-icon">
+    <link rel="icon" href="fanx.ico" type="image/x-icon">
+    <title>上传SSL证书</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>上传SSL证书</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="key_file">上传KEY文件:</label>
+            <input type="file" id="key_file" name="key_file">
+            <textarea name="key_content" placeholder="或粘贴KEY文件内容"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pem_file">上传PEM文件:</label>
+            <input type="file" id="pem_file" name="pem_file">
+            <textarea name="pem_content" placeholder="或粘贴PEM文件内容"></textarea>
+        </div>
+        <button type="submit">上传</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="fanx.ico" type="image/x-icon">
+    <link rel="icon" href="fanx.ico" type="image/x-icon">
+    <title>查看SSL证书</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>查看SSL证书</h1>
+    <div class="cert-container">
+        <div class="cert-box">
+            <h2>PEM 文件</h2>
+            <textarea readonly>{{ pem_content }}</textarea>
+        </div>
+        <div class="cert-box">
+            <h2>KEY 文件</h2>
+            <textarea readonly>{{ key_content }}</textarea>
+        </div>
+    </div>
+    <a href="{{ url_for('index') }}" class="back-btn">返回</a>
+</div>
+</body>
+</html>

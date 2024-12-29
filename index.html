@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="fanx.ico" type="image/x-icon">
+    <link rel="icon" href="fanx.ico" type="image/x-icon">
+    <title>SSL证书管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SSL证书管理</h1>
+        <a href="{{ url_for('upload_file') }}" class="upload-btn">上传证书</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>文件夹</th>
+                    <th>文件名</th>
+                    <th>域名</th>
+                    <th>到期时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cert in certs %}
+                <tr>
+                    <td>{{ cert.folder }}</td>
+                    <td>{{ cert.filename }}</td>
+                    <td>{{ cert.domain }}</td>
+                    <td>{{ cert.expire_date }}</td>
+                    <td>
+                        <a href="{{ url_for('view_file', folder=cert.folder) }}">查看</a>
+                        <a href="{{ url_for('download_folder', folder=cert.folder) }}">下载</a>
+                        <a href="{{ url_for('delete_file', folder=cert.folder) }}">删除</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
