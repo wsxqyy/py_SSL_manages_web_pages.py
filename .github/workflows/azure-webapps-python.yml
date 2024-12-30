@@ -24,4 +24,4 @@ jobs:
 
     - name: Run Flask app
       run: |
-        nohup python your_script.py &
+        nohup python SSL_manages_web_pages.py &
