@@ -63,7 +63,7 @@ Select PEM and KEY files to upload through the web interface. You can also input
 ## 📊 Version History
 
 - **v1.0**: Initial version, providing basic functions for uploading, viewing, downloading, and deleting.
-
+- **v1.0.1**: Updated the instant-on dependent exe and updated the single-file version of the program script. 
 ## 🤝 Contributions
 
 Contributions to this project are welcome. If you have any suggestions for improvement or find any issues, you can submit them through GitHub's Issue or Pull Request.
